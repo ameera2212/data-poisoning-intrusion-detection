@@ -29,3 +29,40 @@ We will train a machine learning model using a public cybersecurity dataset cont
 Deliverable 1: Research and project planning.
 
 Dataset selection, model implementation, poisoning experiments, and defence evaluation are planned for the next stages.
+
+## How to Run the Project
+
+1. Download the CIC-IDS2017 dataset from:
+   https://www.kaggle.com/datasets/dhoogla/cicids2017
+
+2. Open Google Colab:
+   https://colab.research.google.com/
+
+3. Open `code/Data_Poisoning_IDS.ipynb`.
+
+4. Upload the eight CIC-IDS2017 Parquet files
+   into the Colab `/content` directory.
+
+5. Run all notebook cells in order.
+
+6. View the experimental results in the notebook.
+   Generated CSV and graphs are saved in `/content/results`.
+
+## Requirements
+
+- Python 3
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- pyarrow
+
+## Experiments
+
+The project compares:
+- Original Random Forest intrusion detection model
+- 5%, 10%, and 20% label-flipping attacks
+- Cross-validated label-consistency defence
+
+All models are evaluated using the same clean test set.
+
